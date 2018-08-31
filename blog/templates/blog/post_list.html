@@ -1,6 +1,17 @@
 <html>
 	<body>
-		<p>Hi there!</p>
-		<p>It works!</p>
+		<div>
+			<h1><a href="/">My first blog</a></h1>
+		</div>
+		<hr />
+		
+		{% for post in posts %}
+		<div style="border: 2px solid">
+			<p>{{ post.published_date }}</p>
+			<h1><a href="">{{ post.title }}</a></h1>
+			<p>{{ post.text|linebreaksbr }}</p>
+		</div>
+		<br>
+		{% endfor %}
 	</body>
 </html>
